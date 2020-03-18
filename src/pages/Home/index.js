@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import IconCopy from '../../components/IconCopy';
+import LoadTip from '../../components/LoadTip';
 import StyledWrapper from './styled';
 
 import { Segment, useDefault } from 'segmentit';
@@ -51,6 +52,7 @@ export default function Home() {
   };
   return (
     <StyledWrapper>
+      <LoadTip />
       <CopyToClipboard text={chaos} onCopy={handleCopy}>
         <div className="output">
           {chaos}
