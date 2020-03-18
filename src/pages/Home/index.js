@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import IconCopy from '../../components/IconCopy';
-import LoadTip from '../../components/LoadTip';
 import StyledWrapper from './styled';
 
 import { Segment, useDefault } from 'segmentit';
+const LoadTip = lazy(() => import('../../components/LoadTip'));
 // 创建实例
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const segment = useDefault(new Segment());
@@ -55,7 +55,9 @@ export default function Home() {
   };
   return (
     <StyledWrapper>
-      <LoadTip />
+      <Suspense fallback={'loading...'}>
+        <LoadTip />
+      </Suspense>
       <CopyToClipboard text={chaos} onCopy={handleCopy}>
         <div className="output">
           {chaos}
