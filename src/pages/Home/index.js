@@ -34,6 +34,9 @@ export default function Home() {
     setWords(value);
   };
   const handleCopy = () => {
+    if (copied) {
+      return;
+    }
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
@@ -67,7 +70,6 @@ export default function Home() {
         onChange={handleInputChange}
         name="input"
         id="input"
-        cols="80"
         rows="6"
         placeholder="请输入想要打乱的文本..."
       >

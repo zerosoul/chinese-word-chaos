@@ -9,6 +9,7 @@ const StyledWrapper = styled.div`
   max-width: 90vw;
   margin: 0 auto;
   .input {
+    width: 100%;
     border-radius: 5px;
     padding: 0.4rem;
     margin: 1rem 0 2rem 0;
@@ -25,7 +26,7 @@ const StyledWrapper = styled.div`
     cursor: pointer;
     .copy {
       position: absolute;
-      top: -1.6rem;
+      top: -2rem;
       right: 0;
       display: flex;
       align-items: center;
@@ -39,6 +40,7 @@ const StyledWrapper = styled.div`
     }
   }
   .btn {
+    background: none;
     border: 1px solid #665;
     outline: none;
     border-radius: 5px;
