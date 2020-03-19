@@ -86,7 +86,7 @@ export default function Tip() {
           这就是为什么，你看到了顺序不正确的句子还是读了过去，当然，如果这种顺序错乱特别明显，这个时候大脑会受到刺激，让你去凝视它。
         </p>
         <p className="source">
-          ----源自
+          —— 源自
           <a href="https://www.guokr.com/question/103443/" className="link">
             果壳网
           </a>

@@ -12,17 +12,10 @@ const StyledWrapper = styled.header`
       border-right: 2px dashed #666;
       border-top: 2px dashed #666;
       position: relative;
-      &:after {
-        content: '';
-        width: 2px;
-        height: 2px;
-        position: absolute;
-        bottom: -2px;
-        right: -2px;
-        background: #333;
-      }
     }
     &.da {
+      margin-left: -2px;
+      border-left: 2px dashed #666;
       border-bottom: 2px dashed #666;
     }
   }
