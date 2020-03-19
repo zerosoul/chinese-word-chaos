@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-
+import BgImage from './assets/img/bg.png';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   *{
@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
   #root{
     min-height:100vh;
+    background-image:url(${BgImage});
   }
 
   @media screen and (min-width: 320px){

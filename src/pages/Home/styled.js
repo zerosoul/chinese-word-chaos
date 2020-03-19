@@ -10,20 +10,27 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
   .input {
     width: 100%;
-    border-radius: 5px;
+    max-width: 100%;
+    border: 1px solid #333;
+    background: transparent;
     padding: 0.4rem;
     margin: 1rem 0 2rem 0;
+    min-height: 4rem;
+    min-width: 16rem;
   }
   .output {
     padding: 0.4rem 1rem;
     border: 1px dashed #666;
     line-height: 1.4;
-    font-weight: 800;
     text-shadow: 0 0 1px black;
     letter-spacing: 1px;
     position: relative;
-
     cursor: pointer;
+    .content {
+      max-height: 14rem;
+      overflow: scroll;
+      text-align: justify;
+    }
     .copy {
       position: absolute;
       top: -2rem;
@@ -49,6 +56,9 @@ const StyledWrapper = styled.div`
     cursor: pointer;
     &[disabled] {
       color: #999;
+    }
+    &:hover {
+      box-shadow: 0 0 5px black;
     }
   }
 `;

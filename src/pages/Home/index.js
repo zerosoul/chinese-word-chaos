@@ -1,13 +1,14 @@
 import React, { lazy, Suspense } from 'react';
 import LoadTip from '../../components/LoadTip';
-import Tip from '../../components/Tip';
+import HeaderWrapper from '../../containers/HeaderWrapper';
 import StyledWrapper from './styled';
 const Dashboard = lazy(() => import('../../containers/Dashboard'));
 
 export default function Home() {
   return (
     <StyledWrapper>
-      <Tip />
+      <HeaderWrapper />
+
       <Suspense fallback={<LoadTip />}>
         <Dashboard />
       </Suspense>

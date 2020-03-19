@@ -11,6 +11,7 @@ export default function IconCopy() {
       p-id="2056"
       width="32"
       height="32"
+      fill="#555"
     >
       <path
         d="M128 128v640h224v-64H192V192h384v32h64V128z m256 128v640h512V256z m64 64h384v512H448z"
