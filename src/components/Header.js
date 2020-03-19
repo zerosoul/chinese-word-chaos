@@ -9,8 +9,8 @@ const StyledWrapper = styled.header`
   .w {
     padding: 0.1rem;
     &.luan {
-      border-right: 2px solid #222;
-      border-top: 2px solid #222;
+      border-right: 2px dashed #666;
+      border-top: 2px dashed #666;
       position: relative;
       &:after {
         content: '';
@@ -19,11 +19,11 @@ const StyledWrapper = styled.header`
         position: absolute;
         bottom: -2px;
         right: -2px;
-        background: #222;
+        background: #333;
       }
     }
     &.da {
-      border-bottom: 2px solid #222;
+      border-bottom: 2px dashed #666;
     }
   }
 `;
