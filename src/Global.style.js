@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
   #root{
     min-height:100vh;
+    background-color:#fff;
     background-image:url(${BgImage});
   }
 
