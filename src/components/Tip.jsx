@@ -27,6 +27,7 @@ const StyledTipModalWrapper = styled.div`
   z-index: 999;
   .content {
     width: 80vw;
+    max-width: 800px;
     padding: 1.4rem;
     background: rgba(2, 2, 2, 0.9);
     color: #fff;
@@ -71,7 +72,7 @@ const StyledTipModalWrapper = styled.div`
 export default function Tip() {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => {
-    setVisible(prev => !prev);
+    setVisible((prev) => !prev);
   };
   return visible ? (
     <StyledTipModalWrapper>

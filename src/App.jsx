@@ -1,4 +1,8 @@
+import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
+import LoadTip from './components/LoadTip';
+import HeaderWrapper from './containers/HeaderWrapper';
+const Dashboard = lazy(() => import('./containers/Dashboard'));
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -6,7 +10,8 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  max-width: 90vw;
+  width: 90vw;
+  max-width: 1200px;
   margin: 0 auto;
   .input {
     width: 100%;
@@ -19,6 +24,7 @@ const StyledWrapper = styled.div`
     min-width: 16rem;
   }
   .output {
+    margin-top: 2rem;
     padding: 0.4rem 1rem;
     border: 1px dashed #666;
     line-height: 1.4;
@@ -63,4 +69,15 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default StyledWrapper;
+function App() {
+  return (
+    <StyledWrapper>
+      <HeaderWrapper />
+      <Suspense fallback={<LoadTip />}>
+        <Dashboard />
+      </Suspense>
+    </StyledWrapper>
+  );
+}
+
+export default App;

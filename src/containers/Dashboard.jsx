@@ -23,10 +23,7 @@ function getChaos(wordArr) {
       return w;
     }
     if (pattern.test(w)) {
-      return w
-        .split('')
-        .reverse()
-        .join('');
+      return w.split('').reverse().join('');
     } else {
       return w;
     }
@@ -36,7 +33,7 @@ function getChaos(wordArr) {
 const initWords = '科学研究表明，汉字顺序并不一定影响阅读。';
 const initChaos = getChaos(
   segment.doSegment(initWords, {
-    simple: true
+    simple: true,
   })
 );
 export default function Dashboard() {
@@ -59,7 +56,7 @@ export default function Dashboard() {
     console.log({ words });
 
     let wordArr = segment.doSegment(words, {
-      simple: true
+      simple: true,
     });
     console.log({ wordArr });
     let newWords = getChaos(wordArr);
@@ -68,15 +65,6 @@ export default function Dashboard() {
   };
   return (
     <>
-      <CopyToClipboard text={chaos} onCopy={handleCopy}>
-        <div className="output">
-          <p className="content">{chaos}</p>
-          <div className="copy">
-            {copied && <span className="tip">已复制！</span>}
-            <IconCopy />
-          </div>
-        </div>
-      </CopyToClipboard>
       <textarea
         defaultValue={words}
         className="input"
@@ -89,6 +77,15 @@ export default function Dashboard() {
       <button disabled={!words} className="chaos btn" onClick={handleClick}>
         打乱顺序
       </button>
+      <CopyToClipboard text={chaos} onCopy={handleCopy}>
+        <div className="output">
+          <p className="content">{chaos}</p>
+          <div className="copy">
+            {copied && <span className="tip">已复制！</span>}
+            <IconCopy />
+          </div>
+        </div>
+      </CopyToClipboard>
     </>
   );
 }
