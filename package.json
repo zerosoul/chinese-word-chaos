@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/zerosoul/chinese-word-chaos/issues"
   },
-  "homepage": "http://works.yangerxiao.com/chinese-word-chaos",
+  "homepage": "http://word-chaos.yangerxiao.com/",
   "engines": {
     "node": ">=15.0.0",
     "npm": ">=7.0.0"
